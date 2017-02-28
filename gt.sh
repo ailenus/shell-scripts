@@ -1,8 +1,7 @@
 #!/bin/bash
 
 if [ "$1" = "" ] ; then
-    MSG="(this is an automatically generated commit message; "
-    MSG+="the committer likely forgot to write one)"
+    MSG="(empty commit message)"
 else
     MSG="$1"
 fi
