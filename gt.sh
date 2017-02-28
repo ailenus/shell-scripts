@@ -9,5 +9,5 @@ fi
 
 git add -A
 git commit -m "$MSG"
-git pull origin master
+git pull
 git push origin master
