@@ -10,17 +10,32 @@ fi
 
 FILE_NAME="${FILE%".tex"}"
 
-latex "$FILE"
+pdflatex "$FILE"
 if [ "$BIB" = "b" ] ; then
     bibtex "$FILE_NAME"
 fi
-latex "$FILE"
-latex "$FILE"
-dvipdf "${FILE_NAME}.dvi"
+pdflatex "$FILE"
+pdflatex "$FILE"
+
 rm "${FILE_NAME}.aux"
 rm "${FILE_NAME}.log"
-rm "${FILE_NAME}.dvi"
+
 if [ "$BIB" = "b" ] ; then
     rm "${FILE_NAME}.blg"
 fi
-open "${FILE_NAME}.pdf"
+
+if [ -e "${FILE_NAME}.toc" ] ; then
+    rm "${FILE_NAME}.toc"
+fi
+if [ -e "${FILE_NAME}.out" ] ; then
+    rm "${FILE_NAME}.out"
+fi
+if [ -e "${FILE_NAME}.nav" ] ; then
+    rm "${FILE_NAME}.nav"
+fi
+if [ -e "${FILE_NAME}.snm" ] ; then
+    rm "${FILE_NAME}.snm"
+fi
+
+mv "${FILE_NAME}.pdf" "${FILE_NAME}-save.pdf"
+open "${FILE_NAME}-save.pdf"
