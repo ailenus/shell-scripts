@@ -37,5 +37,4 @@ if [ -e "${FILE_NAME}.snm" ] ; then
     rm "${FILE_NAME}.snm"
 fi
 
-mv "${FILE_NAME}.pdf" "${FILE_NAME}-save.pdf"
-open "${FILE_NAME}-save.pdf"
+open "${FILE_NAME}.pdf"
