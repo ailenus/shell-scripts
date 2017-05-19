@@ -8,4 +8,4 @@ small modifications.
 specified by the first argument with pdfLaTeX; an optional argument of "b"
 in addition compiles it with BibTeX
 * `ly.sh` takes one argument and compiles the file specified thereby with
-lilypond
+LilyPond
