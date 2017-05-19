@@ -37,4 +37,4 @@ if [ -e "${FILE_NAME}.snm" ] ; then
     rm "${FILE_NAME}.snm"
 fi
 
-open "${FILE_NAME}.pdf"
+open -a /Applications/Preview.app/ "${FILE_NAME}.pdf"

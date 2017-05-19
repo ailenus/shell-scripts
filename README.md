@@ -7,3 +7,5 @@ small modifications.
 * `ltx.sh` takes one and an optional second argument, and compiles the file
 specified by the first argument with pdfLaTeX; an optional argument of "b"
 in addition compiles it with BibTeX
+* `ly.sh` takes one argument and compiles the file specified thereby with
+lilypond
